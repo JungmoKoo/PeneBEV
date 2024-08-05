@@ -70,7 +70,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">NAVER LABS<br>IROS 2024</span>
+              <span class="author-block"><strong>NAVER LABS</strong><br>IROS 2024</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
             </div>
 
@@ -176,17 +176,16 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Bird's-Eye-View (BEV) segmentation is a essential technology for safe and efficient navigation. This is
-              even more necessary in indoor driving, where there are dynamic and unstructured objects such as people and
-              robot. However, since there is no way to generate training data, most of the researches have been
-              conducted mainly in outdoor environments. In this paper, we propose an innovative approach to address this
-              challenge. We automatically generate BEV training data for indoor environments based on the physics engine
-              of a simulator. This eliminates the needs for tons of real data and virtual environments. We also propose
-              a lightweight network architecture capable of BEV panoptic segmentation in real-time. Based on this
-              network and simple image processing, our framework shows fast but also robust performance in real-world
-              environments with no gap between simulation and reality. The network can inference at a speed of about 61
-              FPS on AGX Orin in FP16 mode. Furthermore, it outperforms existing algorithms in the semantic segmentation
-              task, achieving 14% higher mIoU.
+              Bird's-Eye-View (BEV) segmentation is a essential technology for safe and efficient navigation.
+              This is even more necessary in indoor driving, where there are dynamic and unstructured objects such as people and robot.
+              However, since there is no way to generate training data, most of the researches have been conducted mainly in outdoor environments.
+              In this paper, we propose an innovative approach to address this challenge.
+              We automatically generate BEV training data for indoor environments based on the physics engine of a simulator.
+              This eliminates the needs for tons of real data and virtual environments.
+              We also propose a lightweight network architecture capable of BEV panoptic segmentation in real-time.
+              Based on this network and simple image processing, our framework shows fast but also robust performance in real-world environments with <font color="e51e78"><strong>no gap between simulation and reality</strong></font>.
+              The network can inference at a speed of about 61 FPS on AGX Orin in FP16 mode.
+              Furthermore, it outperforms existing algorithms in the semantic segmentation task, achieving 14% higher mIoU.
             </p>
           </div>
         </div>
@@ -311,11 +310,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{kim2024penebev
-  author    = {Kim, Dawit and Koo, Jungmo and Yun, Jongseob and Park, Soonyong},  
-  title     = {Real-time Bird’s-Eye-View Panoptic Segmentation for Monocular-based Indoor Navigation},
-  journal   = {IROS},
-  year      = {2024},
+      <pre><code>@inproceedings{kim2024penebev,
+  title={{Real-time Bird’s-Eye-View Panoptic Segmentation for Monocular-based Indoor Navigation}},
+  author={Kim, Dawit and Koo, Jungmo and Yun, Jongseob and Park, Soonyong}, 
+  booktitle={Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year={2024}
 }</code></pre>
     </div>
   </section>
