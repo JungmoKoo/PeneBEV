@@ -128,11 +128,10 @@ Indoor Navigation</h1>
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -141,8 +140,30 @@ Indoor Navigation</h1>
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
+
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <img src="static/images/OverallArchitecture.jpg" alt="Overall architecture of PeneBEV"/> -->
+      <!-- <img src="static/images/OverallArchitecture.jpg" alt="Overall architecture of PeneBEV" class="center-image" style="max-width: 100%; height: auto;"> -->
+      <!-- <embed src="static/images/OverallArchitecture.pdf"/> -->
+      <iframe src="static/images/OverallArchitecture.pdf" style="width: 100%;height: 100%;border: none;"></iframe>
+      <h2 class="subtitle has-text-centered">
+        <em>
+          <strong>Overall architecture of PeneBEV.</strong>
+        </em>
+        <em>
+          Overall architecture of PeneBEV. During training, we use the semantic color map from a simulated ideal pinhole camera, and during inference, we convert a real image into an image with the same geometric characteristics as the simulation. PeneBEV extracts features from this map, converting them into BEV features for efficient localization and segmentation.
+        </em>        
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
