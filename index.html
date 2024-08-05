@@ -24,7 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>PeneBEV: Real-time Bird’s-Eye-View Panoptic Segmentation for Monocular-based
+Indoor Navigation</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -56,17 +57,18 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Dawit Kim</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jungmo Koo</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jongseob Yun</a></span>
+                    <span class="author-block">
+                      <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Soonyong Park</a></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">NAVER LABS.<br>IROS 2024</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -148,7 +150,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Bird's-Eye-View (BEV) segmentation is a essential technology for safe and efficient navigation. This is even more necessary in indoor driving, where there are dynamic and unstructured objects such as people and robot. However, since there is no way to generate training data, most of the researches have been conducted mainly in outdoor environments. In this paper, we propose an innovative approach to address this challenge. We automatically generate BEV training data for indoor environments based on the physics engine of a simulator. This eliminates the needs for tons of real data and virtual environments. We also propose a lightweight network architecture capable of BEV panoptic segmentation in real-time. Based on this network and simple image processing, our framework shows fast but also robust performance in real-world environments with no gap between simulation and reality. The network can inference at a speed of about 61 FPS on AGX Orin in FP16 mode. Furthermore, it outperforms existing algorithms in the semantic segmentation task, achieving 14\% higher mIoU.
           </p>
         </div>
       </div>
