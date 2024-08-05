@@ -7,9 +7,10 @@
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:url" content="https://jungmokoo.github.io/penebev/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" /> -->
+  <meta property="og:image" content="static/image/OverallArchitecture.pdf" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -18,6 +19,7 @@
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
@@ -126,11 +128,10 @@ Indoor Navigation</h1>
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -139,8 +140,28 @@ Indoor Navigation</h1>
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
+
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <img src="static/images/OverallArchitecture.jpg" alt="Overall architecture of PeneBEV"/> -->
+      <img src="static/images/OverallArchitecture.jpg" alt="Overall architecture of PeneBEV" class="center-image" style="max-width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        <em>
+          <strong>Overall architecture of PeneBEV.</strong>
+        </em>
+        <em>
+          Overall architecture of PeneBEV. During training, we use the semantic color map from a simulated ideal pinhole camera, and during inference, we convert a real image into an image with the same geometric characteristics as the simulation. PeneBEV extracts features from this map, converting them into BEV features for efficient localization and segmentation.
+        </em>        
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
