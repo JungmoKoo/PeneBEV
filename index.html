@@ -231,6 +231,192 @@
   <!-- End image carousel -->
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <center><h2 class="title is-3">Visual Comparisons</h2></center>
+    <br>
+    <center>Click the buttons below to see the inference results for each image under different environments!</center>
+    <!-- <br> -->
+    <hr style="margin: 4px 0; border: none; height: 1px;">
+    <center><button id="Real" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_1_penebev.png', this); 
+      changeImage('example1_cam2bev', 'assets/images/compare_1_cam2bev.png', this); 
+      changeImage('example2_penebev', 'assets/images/compare_2_penebev.png', this); 
+      changeImage('example2_cam2bev', 'assets/images/compare_2_cam2bev.png', this); 
+      changeImage('example3_penebev', 'assets/images/compare_3_penebev.png', this); 
+      changeImage('example3_cam2bev', 'assets/images/compare_3_cam2bev.png', this); 
+      changeImage('example4_penebev', 'assets/images/compare_4_penebev.png', this); 
+      changeImage('example4_cam2bev', 'assets/images/compare_4_cam2bev.png', this); 
+      changeLabel('example1_label', 'Cam2BEV', this); 
+      changeLabel('example2_label', 'Cam2BEV', this); 
+      changeLabel('example3_label', 'Cam2BEV', this); 
+      changeLabel('example4_label', 'Cam2BEV', this); 
+      changeTopLabel('example1_top_label', false, this);
+      changeTopLabel('example2_top_label', false, this);
+      changeTopLabel('example3_top_label', false, this);
+      changeTopLabel('example4_top_label', false, this);
+      ">Real</button>
+
+    <button id="Sim" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_sim_1_alg.png', this); 
+      changeImage('example1_cam2bev', 'assets/images/compare_sim_1_gt.png', this); 
+      changeImage('example2_penebev', 'assets/images/compare_sim_2_alg.png', this); 
+      changeImage('example2_cam2bev', 'assets/images/compare_sim_2_gt.png', this); 
+      changeImage('example3_penebev', 'assets/images/compare_sim_3_alg.png', this); 
+      changeImage('example3_cam2bev', 'assets/images/compare_sim_3_gt.png', this); 
+      changeImage('example4_penebev', 'assets/images/compare_sim_4_alg.png', this); 
+      changeImage('example4_cam2bev', 'assets/images/compare_sim_4_gt.png', this); 
+      changeLabel('example1_label', 'GT', this); 
+      changeLabel('example2_label', 'GT', this); 
+      changeLabel('example3_label', 'GT', this); 
+      changeLabel('example4_label', 'GT', this); 
+      changeTopLabel('example1_top_label', true, this);
+      changeTopLabel('example2_top_label', true, this);
+      changeTopLabel('example3_top_label', true, this);
+      changeTopLabel('example4_top_label', true, this);
+      ">Sim.</button>
+
+
+    <div class="content has-text-justified">
+      <p>
+      </p>
+    </div>
+    
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <div id="example1" class="bal-container-small">
+      
+                <div class="bal-after">
+                  <img id='example1_penebev' src="assets/images/compare_1_penebev.png">
+                  <div class="bal-afterPosition afterLabel">
+                    PeneBEV (Ours)
+                  </div>
+                  <div id="example1_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                    Cam2BEV
+                  </div>
+                </div>
+              
+                <div class="bal-before">
+                  <div class="bal-before-inset">
+                  <img id='example1_cam2bev' src="assets/images/compare_1_cam2bev.png">
+                    <div id="example1_label" class="bal-beforePosition beforeLabel">
+                      Cam2BEV
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="bal-handle">
+                  <span class=" handle-left-arrow"></span>
+                  <span class="handle-right-arrow"></span>
+                </div>
+              
+              </div>
+              
+              <br>
+
+              <div id="example2" class="bal-container-small">
+      
+                <div class="bal-after">
+                  <img id='example2_penebev' src="assets/images/compare_2_penebev.png">
+                  <div class="bal-afterPosition afterLabel">
+                    PeneBEV (Ours)
+                  </div>
+                  <div id="example2_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                    Cam2BEV
+                  </div>
+                </div>
+              
+                <div class="bal-before">
+                  <div class="bal-before-inset">
+                  <img id='example2_cam2bev' src="assets/images/compare_2_cam2bev.png">
+                    <div id="example2_label" class="bal-beforePosition beforeLabel">
+                      Cam2BEV
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="bal-handle">
+                  <span class=" handle-left-arrow"></span>
+                  <span class="handle-right-arrow"></span>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            
+            <div id="example4" class="bal-container-small">
+              <div class="bal-after">
+                <img id='example3_penebev' src="assets/images/compare_3_penebev.png">
+                <div class="bal-afterPosition afterLabel">
+                  PeneBEV (Ours)
+                </div>
+                <div id="example3_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                  Cam2BEV
+                </div>
+              </div>
+            
+              <div class="bal-before">
+                <div class="bal-before-inset">
+                <img id='example3_cam2bev' src="assets/images/compare_3_cam2bev.png">
+                  <div id="example3_label" class="bal-beforePosition beforeLabel">
+                    Cam2BEV
+                  </div>
+                </div>
+              </div>
+            
+              <div class="bal-handle">
+                <span class=" handle-left-arrow"></span>
+                <span class="handle-right-arrow"></span>
+              </div>
+            
+            </div>
+            
+            <br>
+            
+            <div id="example5" class="bal-container-small">
+              <div class="bal-after">
+                <img id='example4_penebev' src="assets/images/compare_4_penebev.png">
+                <div class="bal-afterPosition afterLabel">
+                  PeneBEV (Ours)
+                </div>
+                <div id="example4_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                  Cam2BEV
+                </div>
+              </div>
+            
+              <div class="bal-before">
+                <div class="bal-before-inset">
+                <img id='example4_cam2bev' src="assets/images/compare_4_cam2bev.png">
+                  <div id="example4_label" class="bal-beforePosition beforeLabel">
+                    Cam2BEV
+                  </div>
+                </div>
+              </div>
+            
+              <div class="bal-handle">
+                <span class=" handle-left-arrow"></span>
+                <span class="handle-right-arrow"></span>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   <!-- Youtube video -->
@@ -239,7 +425,7 @@
     <div class="hero-body">
       <div class="container">
         <!-- Paper video. -->
-        <h2 class="title is-3">Video</h2>
+        <center><h2 class="title is-3">Video Presentation</h2></center><br>
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
 
@@ -352,6 +538,71 @@
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
   <!-- End of Statcounter Code -->
+
+<script src="static/js/before_after.js"></script>
+
+<script>
+    new BeforeAfter({
+        id: '#example1'
+    });
+    new BeforeAfter({
+        id: '#example2'
+    });
+    new BeforeAfter({
+        id: '#example4'
+    });
+    new BeforeAfter({
+        id: '#example5'
+    });
+
+</script>
+
+<script>
+  function changeImage(imageId, imageSrc, buttonClicked) {
+      let image = document.getElementById(imageId);
+      image.src = imageSrc;
+
+      let buttons = document.getElementsByTagName('button');
+      for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('active');
+      }
+
+      buttonClicked.classList.add('active');
+  }
+</script>
+
+<script>
+  function changeLabel(labelId, text, buttonClicked) {
+      let label = document.getElementById(labelId);
+      label.innerText = text;
+
+      let buttons = document.getElementsByTagName('button');
+      for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('active');
+      }
+
+      buttonClicked.classList.add('active');
+  }
+</script>
+
+<script>
+  function changeTopLabel(labelId, visible, buttonClicked) {
+      let label = document.getElementById(labelId);
+      if(visible){
+        label.style.display = "block";
+      }
+      else {
+        label.style.display = "none";
+      }
+
+      let buttons = document.getElementsByTagName('button');
+      for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('active');
+      }
+
+      buttonClicked.classList.add('active');
+  }
+</script>
 
 </body>
 
