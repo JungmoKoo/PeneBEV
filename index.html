@@ -70,7 +70,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><strong>NAVER LABS</strong><br>IROS 2024</span>
+              <span class="author-block">NAVER LABS<br>IROS 2024</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
             </div>
 
@@ -129,44 +129,18 @@
 
 
   <!-- Teaser video-->
-  <!-- <section class="hero teaser">
+  <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <source src="static/videos/banner_video.mp4"
+      <video poster="" id="tree" autoplay muted loop height="100%">
+        <source src="assets/videos/main_video.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <br><br>
     </div>
   </div>
-</section> -->
+</section>
   <!-- End teaser video -->
-
-  <!-- Teaser image-->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <!-- <img src="static/images/OverallArchitecture.jpg" alt="Overall architecture of PeneBEV"/> -->
-        <img src="static/images/OverallArchitecture.png" alt="Overall architecture of PeneBEV" class="center-image"
-          style="max-width: 100%; height: auto;">
-        <h2 class="subtitle has-text-centered">
-          <em>
-            <strong>Overall architecture of PeneBEV.</strong>
-          </em>
-          <em>
-            During training, we use the semantic color map from a simulated ideal
-            pinhole camera, and during inference, we convert a real image into an image with the same geometric
-            characteristics as the simulation. PeneBEV extracts features from this map, converting them into BEV
-            features for efficient localization and segmentation.
-          </em>
-        </h2>
-      </div>
-    </div>
-  </section>
-  <!-- End teaser image -->
-
 
   <!-- Paper abstract -->
   <section class="section hero is-light">
@@ -230,6 +204,50 @@
   </section> -->
   <!-- End image carousel -->
 
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <center><h2 class="title is-3">BEV Data Generation</h2></center><br>
+      <center>We propose <strong style="color: #e51e78;">NLST</strong> (NAVER LABS Sliding Things), a highly effective method for generating indoor scenes. <br>This method leverages the simulator's physics engine to collect data across various scenarios. </center><br>
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+          <!-- <div class="hero body"> -->
+            <video poster="" id="tree" autoplay muted loop height="100%" playsinline>
+              <!-- Your video here -->
+              <source src="assets/videos/nlst_video.mp4"
+              type="video/mp4">
+            </video>
+          <!-- </div> -->
+        </div>
+        <br>
+        <center><h2 class="title is-5">Generation Results</h2></center>
+        <hr style="margin: 4px 0; border: none; height: 1px; background-color: transparent;">
+        <center>During the sliding process, varying distances and collisions between objects generate a wide variety of data from a single scene.</center><br>
+        <div class="columns is-centered has-text-centered">
+          <!-- <div class="column is-four-fifths"> -->
+            <!-- <div class="hero body"> -->
+              <video poster="" id="tree" autoplay muted loop height="100%" playsinline>
+                <!-- Your video here -->
+                <source src="assets/videos/nlst_data.mp4"
+                type="video/mp4">
+              </video>
+            <!-- </div> -->
+        </div>
+        <figcaption>* Front semantic map (left) and BEV semantic map (right)</figcaption>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <center><h2 class="title is-3">PeneBEV</h2></center><br>
+      <center>We propose a lightweight BEV panoptic segmentation network called <strong style="color: #e51e78;">PeneBEV</strong> (Penetrating Bird’s-EyeView).<br>This network was trained using only the NLST dataset, a fully automatically generated dataset.<br>It achieved 61 FPS when running in FP16 mode on the AGX Orin.</center>
+      <img src="assets/images/overall_architecture.png">
+      </div>      
+    </div>
+  </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -237,7 +255,7 @@
     <br>
     <center>Click the buttons below to see the inference results for each image under different environments!</center>
     <!-- <br> -->
-    <hr style="margin: 4px 0; border: none; height: 1px;">
+    <hr style="margin: 4px 0; border: none; height: 1px; background-color: transparent;">
     <center><button id="Real" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_1_penebev.png', this); 
       changeImage('example1_cam2bev', 'assets/images/compare_1_cam2bev.png', this); 
       changeImage('example2_penebev', 'assets/images/compare_2_penebev.png', this); 
@@ -417,13 +435,45 @@
   </div>
 </section>
 
+<!-- Image carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <center><h2 class="title is-3">Experimental Results</h2></center><br>
+      <center>PeneBEV-tiny is the smallest model, PeneBEV-s is the small model, and PeneBEV-m is the medium model.</center>
+      <div class="container is-max-desktop">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="assets/images/exp_result1.png"/>
+            <h2 class="subtitle has-text-centered" style="font-size: 16px; margin-top: 7px;">
+              Comprehensive Performance Metrics for PeneBEV and RTMDet Models in Scene Understanding Tasks.              
+            </h2>
+          </div>
+          <div class="item">
+            <img src="assets/images/exp_result2.png"/>
+            <h2 class="subtitle has-text-centered"  style="font-size: 16px; margin-top: 7px;">
+              IOU (%) for each class on the evaluation dataset
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
 
+<!-- <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <center><h2 class="title is-3">Experimental Result</h2></center><br>
+    <center>We propose a lightweight BEV panoptic segmentation network called <strong style="color: #e51e78;">PeneBEV</strong> (Penetrating Bird’s-EyeView).<br>This network was trained using only the NLST dataset, a fully automatically generated dataset.<br>It achieved 61 FPS when running in FP16 mode on the AGX Orin.</center>
+    <img src="assets/images/overall_architecture.png">
+    </div>      
+  </div>
+</section> -->
 
   <!-- Youtube video -->
   <!-- <section class="hero is-small is-light"> -->
   <section class="hero is-small">
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-max-desktop">
         <!-- Paper video. -->
         <center><h2 class="title is-3">Video Presentation</h2></center><br>
         <div class="columns is-centered has-text-centered">
